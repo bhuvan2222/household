@@ -28,6 +28,10 @@ app.use(
 );
 app.use(express.json({ limit: '1mb' }));
 
+app.get('/health', (_req, res) => {
+  res.status(200).json({ status: 'ok', service: 'household-expense-backend' });
+});
+
 app.use('/api', routes);
 
 app.use((req, res) => {
