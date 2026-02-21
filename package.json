@@ -10,9 +10,6 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "db:up": "docker compose -f docker/docker-compose.yml up -d",
-    "db:down": "docker compose -f docker/docker-compose.yml down",
-    "db:logs": "docker compose -f docker/docker-compose.yml logs -f postgres",
     "knex": "knex --knexfile knexfile.js",
     "migrate": "knex --knexfile knexfile.js migrate:latest",
     "migrate:rollback": "knex --knexfile knexfile.js migrate:rollback",
